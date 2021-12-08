@@ -24,6 +24,11 @@ class MainActivity : AppCompatActivity() {
             Firebase.auth.signOut()
             finish()
         }
+
+        val addQuery = findViewById<Button>(R.id.btn_addQuery)
+        addQuery.setOnClickListener {
+            startActivity(Intent(this, PostQueryActivity::class.java))
+        }
     }
 
     public override fun onStart() {

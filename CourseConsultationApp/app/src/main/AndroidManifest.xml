@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CourseConsultationApp">
         <activity
+            android:name=".PostQueryActivity"
+            android:exported="true" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true" />
         <activity

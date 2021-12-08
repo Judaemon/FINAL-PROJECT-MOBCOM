@@ -10,6 +10,7 @@ import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class RegisterActivity : AppCompatActivity() {
@@ -17,6 +18,8 @@ class RegisterActivity : AppCompatActivity() {
 
     private lateinit var email: TextInputLayout
     private lateinit var password: TextInputLayout
+    private lateinit var firstname: TextInputLayout
+    private lateinit var lastname: TextInputLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +30,8 @@ class RegisterActivity : AppCompatActivity() {
         // Getting the input field by ID
         email = findViewById(R.id.email)
         password = findViewById(R.id.password)
+        firstname = findViewById(R.id.firstname)
+        lastname = findViewById(R.id.lastname)
 
         var emailValue: String
         var passwordValue: String
@@ -96,16 +101,31 @@ class RegisterActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
-                    Log.d(LoginActivity.TAG, "createUserWithEmail:success")
-                    val user = auth.currentUser
+                    // Sign in success
+                    Log.d(TAG, "createUserWithEmail:success")
+
                     Toast.makeText(this, "Registered successfully", Toast.LENGTH_SHORT).show()
+
+                    val user = auth.currentUser
+
+                    val db = Firebase.firestore
+
+                    val userInfo = hashMapOf(
+                        "firstname" to firstname.editText?.text.toString(),
+                        "lastname" to lastname.editText?.text.toString(),
+                        "isAdmin" to false,
+                    )
+
+                    db.collection("users").document(user?.uid.toString())
+                        .set(userInfo)
+                        .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }
+                        .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
 
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
                 } else {
                     // If sign in fails, display a message to the user.
-                    Log.w(LoginActivity.TAG, "createUserWithEmail:failure", task.exception)
+                    Log.w(TAG, "createUserWithEmail:failure", task.exception)
                     Toast.makeText(baseContext, "Please try again later.",
                         Toast.LENGTH_SHORT).show()
                 }
