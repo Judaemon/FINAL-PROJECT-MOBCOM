@@ -93,7 +93,7 @@ class LoginActivity : AppCompatActivity() {
         if(currentUser != null){
             val db = Firebase.firestore
 
-            val df = db.collection("queries").document(currentUser.uid)
+            val df = db.collection("users").document(currentUser.uid)
 
             df.get()
                 .addOnSuccessListener { document ->

@@ -34,7 +34,7 @@ class StudentSendEmailActivity : AppCompatActivity() {
 
         val btnProceedStudentEmail = findViewById<Button>(R.id.btn_proceedStudentEmail)
         btnProceedStudentEmail.setOnClickListener {
-            if (validateEmail() && validateInput(subject) && validateInput(message)){
+            if (validateEmail() || validateInput(subject) || validateInput(message)){
                 emailValue = email.editText?.text.toString()
                 subjectValue = subject.editText?.text.toString()
                 messageValue = message.editText?.text.toString()
