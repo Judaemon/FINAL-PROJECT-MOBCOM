@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CourseConsultationApp">
         <activity
+            android:name=".CreateEventActivity"
+            android:exported="true" />
+        <activity
             android:name=".InstructorUpdateProfileActivity"
             android:exported="true" />
         <activity
