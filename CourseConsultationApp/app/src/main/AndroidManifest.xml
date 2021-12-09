@@ -13,6 +13,9 @@
             android:name=".InstructorMainActivity"
             android:exported="true" />
         <activity
+            android:name=".UpdateProfileActivity"
+            android:exported="true" />
+        <activity
             android:name=".StudentSendEmailActivity"
             android:exported="true" />
         <activity
