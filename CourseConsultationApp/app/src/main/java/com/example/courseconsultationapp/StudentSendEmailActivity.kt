@@ -53,8 +53,10 @@ class StudentSendEmailActivity : AppCompatActivity() {
                     putExtra(Intent.EXTRA_SUBJECT, subject.editText?.text.toString())
                     putExtra(Intent.EXTRA_TEXT, message.editText?.text.toString())
                 }
+
                 try{
                     startActivity(iSend)
+                    finish()
                     Toast.makeText(this, "Success", Toast.LENGTH_LONG).show()
                 } catch (e: ActivityNotFoundException) {
                     Toast.makeText(this, "Something went wrong!", Toast.LENGTH_LONG).show()

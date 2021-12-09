@@ -1,9 +1,12 @@
 package com.example.courseconsultationapp
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 
 class QueryAdapter(private val queryList : ArrayList<Queries>) : RecyclerView.Adapter<QueryAdapter.QueryHolder>(){
@@ -23,8 +26,22 @@ class QueryAdapter(private val queryList : ArrayList<Queries>) : RecyclerView.Ad
         return queryList.size
     }
 
-    public class QueryHolder(queryView : View) : RecyclerView.ViewHolder(queryView){
-        val topic : TextView = itemView.findViewById(R.id.tv_topic)
-        val isAnswered : TextView = itemView.findViewById(R.id.tv_isAnswered)
+    inner class QueryHolder(queryView : View) : RecyclerView.ViewHolder(queryView){
+        val topic : TextView = queryView.findViewById(R.id.tv_topic)
+        val isAnswered : TextView = queryView.findViewById(R.id.tv_isAnswered)
+
+        init {
+            queryView.setOnClickListener{
+                val position: Int = adapterPosition
+                val test = queryList[position].id
+
+                val intent = Intent(queryView.context, ViewQueryActivity::class.java)
+                intent.putExtra("position", position);
+
+                queryView.context.startActivity(intent)
+
+                Toast.makeText(itemView.context, "You clicked on item #${test}", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 }
