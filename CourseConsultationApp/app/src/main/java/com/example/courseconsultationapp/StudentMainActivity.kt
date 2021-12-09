@@ -39,6 +39,11 @@ class StudentMainActivity : AppCompatActivity() {
             finish()
         }
 
+        val createEvent = findViewById<Button>(R.id.btn_createEvent)
+        createEvent.setOnClickListener {
+            startActivity(Intent(this, CreateEventActivity::class.java))
+        }
+
         val profile = findViewById<Button>(R.id.btn_profile)
         profile.setOnClickListener {
             startActivity(Intent(this, UpdateProfileActivity::class.java))
