@@ -33,20 +33,25 @@ class ViewQueriesActivity : AppCompatActivity() {
     private fun eventChangeListener() {
         db = FirebaseFirestore.getInstance()
         db.collection("queries")
-            .addSnapshotListener(object  : EventListener<QuerySnapshot>{
-                override fun onEvent(value: QuerySnapshot?, error: FirebaseFirestoreException?) {
-                    if (error != null) {
-                         Log.e("Firestore Error", error.message.toString())
-                    }
-
-                    for (dc: DocumentChange in value?.documentChanges!!){
-                        if (dc.type == DocumentChange.Type.ADDED){
-                            queriesArrayList.add(dc.document.toObject(Queries::class.java))
-                        }
-                    }
-
-                    queryAdapter.notifyDataSetChanged()
+            .addSnapshotListener { snapshot, error ->
+                if (error != null) {
+                    Log.e("Firestore Error", error.message.toString())
                 }
-            })
+
+                val test = snapshot!!.documents
+                test.forEach {
+                    val query  = it.toObject(Queries::class.java)
+                    query!!.id = it.id
+                    queriesArrayList.add(query)
+                }
+//
+//                for (dc: DocumentChange in snapshot?.documentChanges!!) {
+//                    if (dc.type == DocumentChange.Type.ADDED) {
+//                        queriesArrayList.add(dc.document.toObject(Queries::class.java))
+//                    }
+//                }
+
+                queryAdapter.notifyDataSetChanged()
+            }
     }
 }
