@@ -28,6 +28,11 @@ class InstructorMainActivity : AppCompatActivity() {
             context.startActivity(iNext)
         }
 
+        val profile = findViewById<Button>(R.id.btn_profile)
+        profile.setOnClickListener {
+            startActivity(Intent(this, InstructorUpdateProfileActivity::class.java))
+        }
+
         val logout = findViewById<Button>(R.id.btn_logout)
         logout.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))

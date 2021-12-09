@@ -12,12 +12,13 @@ import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class UpdateProfileActivity : AppCompatActivity() {
+class InstructorUpdateProfileActivity : AppCompatActivity() {
         private lateinit var firstname: EditText
         private lateinit var lastname: EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_update_profile)
+        setContentView(R.layout.activity_instructor_update_profile)
 
         val user = Firebase.auth.currentUser
         firstname = findViewById(R.id.inputFirstname)
@@ -31,10 +32,9 @@ class UpdateProfileActivity : AppCompatActivity() {
                     Toast.LENGTH_SHORT).show()
             }
         }
-
         val back = findViewById<TextView>(R.id.back)
         back.setOnClickListener {
-            startActivity(Intent(this, StudentMainActivity::class.java))
+            startActivity(Intent(this, InstructorMainActivity::class.java))
         }
     }
 
@@ -65,7 +65,6 @@ class UpdateProfileActivity : AppCompatActivity() {
                 }
         }
     }
-
     private fun saveProfile(){
         val user = Firebase.auth.currentUser
         val db = Firebase.firestore

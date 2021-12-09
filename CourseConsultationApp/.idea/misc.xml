@@ -7,14 +7,18 @@
         <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_main.xml" value="0.1953125" />
         <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_post_query.xml" value="0.33" />
         <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_register.xml" value="0.33" />
-        <entry key="..\:/Users/Billy Nalundasan/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/drawable/ic_person.xml" value="0.31875" />
-        <entry key="..\:/Users/Billy Nalundasan/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_instructor_main.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Billy Nalundasan/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_instructor_send_email.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Billy Nalundasan/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Billy Nalundasan/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_register.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/Billy Nalundasan/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_student_main.xml" value="0.33" />
-        <entry key="..\:/Users/Billy Nalundasan/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_student_send_email.xml" value="0.35260416666666666" />
-        <entry key="..\:/Users/Billy Nalundasan/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/item_query.xml" value="0.3026041666666667" />
+        <entry key="..\:/Users/Hanz Mark/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_create_event.xml" value="0.360054347826087" />
+        <entry key="..\:/Users/Hanz Mark/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_event_list.xml" value="0.1" />
+        <entry key="..\:/Users/Hanz Mark/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_instructor_main.xml" value="0.3482789855072464" />
+        <entry key="..\:/Users/Hanz Mark/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_instructor_update_profile.xml" value="0.3203125" />
+        <entry key="..\:/Users/Hanz Mark/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_post_query.xml" value="0.20885416666666667" />
+        <entry key="..\:/Users/Hanz Mark/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_register.xml" value="0.15670289855072464" />
+        <entry key="..\:/Users/Hanz Mark/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_student_main.xml" value="0.33" />
+        <entry key="..\:/Users/Hanz Mark/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_update_profile.xml" value="0.27395833333333336" />
+        <entry key="..\:/Users/Hanz Mark/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_view_queries.xml" value="0.20885416666666667" />
+        <entry key="..\:/Users/Hanz Mark/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_view_query.xml" value="0.20885416666666667" />
+        <entry key="..\:/Users/Hanz Mark/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/event_item.xml" value="0.20952380952380953" />
+        <entry key="..\:/Users/Hanz Mark/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/item_query.xml" value="0.20885416666666667" />
       </map>
     </option>
   </component>
