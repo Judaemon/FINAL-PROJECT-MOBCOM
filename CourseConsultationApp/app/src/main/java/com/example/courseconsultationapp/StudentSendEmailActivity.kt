@@ -34,20 +34,11 @@ class StudentSendEmailActivity : AppCompatActivity() {
 
         val btnProceedStudentEmail = findViewById<Button>(R.id.btn_proceedStudentEmail)
         btnProceedStudentEmail.setOnClickListener {
-            if (validateEmail()){
-                emailValue = email.editText?.text.toString()
-            }
-            if (validateInput(subject)){
-                subjectValue = subject.editText?.text.toString()
-            }
-            if (validateInput(message)){
-                messageValue = message.editText?.text.toString()
-            }
-//            if (validateInput(message)){
-//                messageValue = message.editText?.text.toString()
-//            }
-
             if (validateEmail() && validateInput(subject) && validateInput(message)){
+                emailValue = email.editText?.text.toString()
+                subjectValue = subject.editText?.text.toString()
+                messageValue = message.editText?.text.toString()
+
                 startActivity(intent)
 
                 iSend=Intent(Intent.ACTION_SENDTO).apply{
@@ -56,8 +47,10 @@ class StudentSendEmailActivity : AppCompatActivity() {
                     putExtra(Intent.EXTRA_SUBJECT, subject.editText?.text.toString())
                     putExtra(Intent.EXTRA_TEXT, message.editText?.text.toString())
                 }
+
                 try{
                     startActivity(iSend)
+                    finish()
                     Toast.makeText(this, "Success", Toast.LENGTH_LONG).show()
                 } catch (e: ActivityNotFoundException) {
                     Toast.makeText(this, "Something went wrong!", Toast.LENGTH_LONG).show()

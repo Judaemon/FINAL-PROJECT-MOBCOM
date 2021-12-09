@@ -42,13 +42,4 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, ViewQueriesActivity::class.java))
         }
     }
-
-    public override fun onStart() {
-        super.onStart()
-        val currentUser = auth.currentUser
-        if(currentUser == null){
-            startActivity(Intent(this, LoginActivity::class.java))
-            finish()
-        }
-    }
 }
