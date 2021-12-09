@@ -16,6 +16,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val studSendEmail=findViewById<Button>(R.id.btn_studentSendEmail)
+        val context = studSendEmail.context
+        val iNext = Intent(context, StudentSendEmailActivity::class.java)
+        //onclick -> button
+        studSendEmail?.setOnClickListener {
+            context.startActivity(iNext)
+        }
+
         auth = Firebase.auth
 
         val logout = findViewById<Button>(R.id.btn_logout)
