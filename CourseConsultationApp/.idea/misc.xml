@@ -3,13 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_instructor_main.xml" value="0.22" />
         <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_main.xml" value="0.1953125" />
         <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_post_query.xml" value="0.33" />
         <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_register.xml" value="0.33" />
-        <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_view_queries.xml" value="0.23880597014925373" />
-        <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/item_query.xml" value="0.33" />
+        <entry key="..\:/Users/Billy Nalundasan/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_instructor_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Billy Nalundasan/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_instructor_send_email.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Billy Nalundasan/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Billy Nalundasan/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_register.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Billy Nalundasan/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_student_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Billy Nalundasan/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_student_send_email.xml" value="0.35260416666666666" />
       </map>
     </option>
   </component>
