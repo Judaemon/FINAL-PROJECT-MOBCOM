@@ -13,7 +13,13 @@
             android:name=".ViewQueryActivity"
             android:exported="true" />
         <activity
+            android:name=".InstructorSendEmailActivity"
+            android:exported="true" />
+        <activity
             android:name=".InstructorMainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UpdateProfileActivity"
             android:exported="true" />
         <activity
             android:name=".StudentSendEmailActivity"
@@ -38,7 +44,8 @@
             android:exported="true" />
         <activity
             android:name=".StudentMainActivity"
-            android:exported="true"></activity>
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>

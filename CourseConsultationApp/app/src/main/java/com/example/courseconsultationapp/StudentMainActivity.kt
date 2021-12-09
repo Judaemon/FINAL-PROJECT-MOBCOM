@@ -32,6 +32,11 @@ class StudentMainActivity : AppCompatActivity() {
             finish()
         }
 
+        val profile = findViewById<Button>(R.id.btn_profile)
+        profile.setOnClickListener {
+            startActivity(Intent(this, UpdateProfileActivity::class.java))
+        }
+
         val addQuery = findViewById<Button>(R.id.btn_addQuery)
         addQuery.setOnClickListener {
             startActivity(Intent(this, PostQueryActivity::class.java))
