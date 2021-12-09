@@ -32,13 +32,13 @@ class PostQueryActivity : AppCompatActivity() {
         val postQuery = findViewById<Button>(R.id.btn_postQuery)
         postQuery.setOnClickListener {
             postQuery()
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, StudentMainActivity::class.java))
             finish()
         }
 
         val cancelQuery = findViewById<Button>(R.id.btn_cancelQuery)
         cancelQuery.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, StudentMainActivity::class.java))
             finish()
         }
     }

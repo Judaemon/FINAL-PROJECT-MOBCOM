@@ -10,6 +10,7 @@ import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class LoginActivity : AppCompatActivity() {
@@ -40,11 +41,35 @@ class LoginActivity : AppCompatActivity() {
                 auth.signInWithEmailAndPassword(emailValue, passwordValue)
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
-                            // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success")
 
-                            startActivity(Intent(this, MainActivity::class.java))
-                            finish()
+                            val currentUser = auth.currentUser
+
+                            val db = Firebase.firestore
+
+                            val df = db.collection("users").document(currentUser!!.uid)
+
+                            df.get()
+                                .addOnSuccessListener { document ->
+                                    if (document != null) {
+                                        Log.d(TAG, "DocumentSnapshot data: ${document.data}")
+                                        if (document.getBoolean("isInstructor") == true){
+                                            startActivity(Intent(this, InstructorMainActivity::class.java))
+                                            finish()
+                                        }
+
+                                        if (document.getBoolean("isInstructor") == false){
+                                            startActivity(Intent(this, StudentMainActivity::class.java))
+                                            finish()
+                                        }
+                                    } else {
+                                        Log.d(TAG, "No such document")
+                                    }
+                                }
+                                .addOnFailureListener { exception ->
+                                    Log.d(TAG, "get failed with ", exception)
+                                }
+
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.exception)
@@ -66,8 +91,30 @@ class LoginActivity : AppCompatActivity() {
         super.onStart()
         val currentUser = auth.currentUser
         if(currentUser != null){
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
+            val db = Firebase.firestore
+
+            val df = db.collection("queries").document(currentUser.uid)
+
+            df.get()
+                .addOnSuccessListener { document ->
+                    if (document != null) {
+                        Log.d(TAG, "DocumentSnapshot data: ${document.data}")
+                        if (document.getBoolean("isInstructor") == true){
+                            startActivity(Intent(this, InstructorMainActivity::class.java))
+                            finish()
+                        }
+
+                        if (document.getBoolean("isInstructor") == false){
+                            startActivity(Intent(this, StudentMainActivity::class.java))
+                            finish()
+                        }
+                    } else {
+                        Log.d(TAG, "No such document")
+                    }
+                }
+                .addOnFailureListener { exception ->
+                    Log.d(TAG, "get failed with ", exception)
+                }
         }
     }
 
@@ -88,6 +135,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    // Regex not working
     private fun validatePassword(): Boolean {
         val newPassword = password.editText?.text.toString().trim { it <= ' ' }
 

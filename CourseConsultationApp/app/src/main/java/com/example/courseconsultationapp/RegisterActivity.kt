@@ -113,7 +113,7 @@ class RegisterActivity : AppCompatActivity() {
                     val userInfo = hashMapOf(
                         "firstname" to firstname.editText?.text.toString(),
                         "lastname" to lastname.editText?.text.toString(),
-                        "isAdmin" to false,
+                        "isInstructor" to false,
                     )
 
                     db.collection("users").document(user?.uid.toString())
@@ -121,7 +121,7 @@ class RegisterActivity : AppCompatActivity() {
                         .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }
                         .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
 
-                    startActivity(Intent(this, MainActivity::class.java))
+                    startActivity(Intent(this, StudentMainActivity::class.java))
                     finish()
                 } else {
                     // If sign in fails, display a message to the user.
