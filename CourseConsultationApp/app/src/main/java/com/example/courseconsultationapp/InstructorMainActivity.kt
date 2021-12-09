@@ -28,6 +28,11 @@ class InstructorMainActivity : AppCompatActivity() {
             context.startActivity(iNext)
         }
 
+        val viewEvent = findViewById<Button>(R.id.btn_viewEvent)
+        viewEvent.setOnClickListener {
+            startActivity(Intent(this, EventListActivity::class.java))
+        }
+
         val profile = findViewById<Button>(R.id.btn_profile)
         profile.setOnClickListener {
             startActivity(Intent(this, InstructorUpdateProfileActivity::class.java))
