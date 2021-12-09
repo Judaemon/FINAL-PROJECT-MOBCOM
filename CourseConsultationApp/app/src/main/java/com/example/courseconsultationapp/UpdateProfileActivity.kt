@@ -19,8 +19,6 @@ class UpdateProfileActivity : AppCompatActivity() {
     private lateinit var firstname: EditText
     private lateinit var lastname: EditText
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_update_profile)
