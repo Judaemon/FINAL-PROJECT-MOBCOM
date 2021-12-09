@@ -6,12 +6,10 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
 
-class StudentSendEmailActivity : AppCompatActivity() {
+class InstructorSendEmailActivity : AppCompatActivity() {
 
     private lateinit var email: TextInputLayout
     private lateinit var subject: TextInputLayout
@@ -19,7 +17,7 @@ class StudentSendEmailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_student_send_email)
+        setContentView(R.layout.activity_instructor_send_email)
 
         // Getting the input field by ID
         email = findViewById(R.id.email)
@@ -30,10 +28,10 @@ class StudentSendEmailActivity : AppCompatActivity() {
         var subjectValue: String
         var messageValue: String
 
-        var iSend:Intent
+        var iSend: Intent
 
-        val btnProceedStudentEmail = findViewById<Button>(R.id.btn_proceedStudentEmail)
-        btnProceedStudentEmail.setOnClickListener {
+        val btnProceedInstructorEmail = findViewById<Button>(R.id.btn_proceedInstructorEmail)
+        btnProceedInstructorEmail.setOnClickListener {
             if (validateEmail()){
                 emailValue = email.editText?.text.toString()
             }

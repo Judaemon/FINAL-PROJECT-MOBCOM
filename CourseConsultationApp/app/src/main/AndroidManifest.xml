@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CourseConsultationApp">
         <activity
+            android:name=".InstructorSendEmailActivity"
+            android:exported="true" />
+        <activity
             android:name=".InstructorMainActivity"
             android:exported="true" />
         <activity
@@ -38,8 +41,7 @@
             android:exported="true" />
         <activity
             android:name=".StudentMainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
