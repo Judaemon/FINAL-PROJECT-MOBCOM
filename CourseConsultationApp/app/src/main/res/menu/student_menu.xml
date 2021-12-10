@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <item
+            android:id="@+id/itm_ViewProfile"
+            android:icon="@drawable/ic_person"
+            android:title="Profile"/>
+
+        <item
+            android:id="@+id/itm_CreateEvent"
+            android:icon="@drawable/ic_event"
+            android:title="Create Event"/>
+
+        <item
+            android:id="@+id/itm_PostQuery"
+            android:icon="@drawable/ic_post_add"
+            android:title="Post Query"/>
+
+        <item
+            android:id="@+id/itm_SendEmail"
+            android:icon="@drawable/ic_send"
+            android:title="Send Email"/>
+
+        <item
+            android:id="@+id/itm_Logout"
+            android:icon="@drawable/ic_exit"
+            android:title="Log out"/>
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/itm_ViewEvents"
+            android:icon="@drawable/ic_event_view"
+            android:title="View Events"/>
+
+        <item
+            android:id="@+id/itm_ViewQuery"
+            android:icon="@drawable/ic_question"
+            android:title="View Query"/>
+    </group>
+
+    <group>
+        <item android:title="MISC">
+            <menu>
+                <item
+                    android:id="@+id/itm_HelpNFeedback"
+                    android:icon="@drawable/ic_help"
+                    android:title="Help &amp; Feedback"/>
+            </menu>
+        </item>
+    </group>
+</menu>

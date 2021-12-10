@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "718202841401",
+    "project_id": "course-consultation-app",
+    "storage_bucket": "course-consultation-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718202841401:android:667a443fd429f2cb9860e8",
+        "android_client_info": {
+          "package_name": "com.example.courseconsultationapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718202841401-5u19nqe6jjc9bdkf2al09rqk9qoumhab.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4Jxkm0kAlaxIUb0NTiU7X9YVGl1eZNIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718202841401-5u19nqe6jjc9bdkf2al09rqk9qoumhab.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
