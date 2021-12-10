@@ -26,6 +26,7 @@
     <group>
         <item
             android:id="@+id/itm_ViewEvents"
+            android:icon="@drawable/ic_event_view"
             android:title="View Events"/>
 
         <item
