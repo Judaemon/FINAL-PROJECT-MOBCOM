@@ -29,6 +29,8 @@ class UpdateProfileActivity : AppCompatActivity() {
                 saveProfile()
                 Toast.makeText(baseContext, "Successfully Updated",
                     Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, StudentMainActivity::class.java))
+                finish()
             }
         }
 

@@ -35,17 +35,13 @@ class EventAdapter (private val eventList : ArrayList<Event>) : RecyclerView.Ada
 
         init {
             eventView.setOnClickListener{
-//                val event : Event = eventList[position]
                 val position: Int = adapterPosition
                 val eid = eventList[position].id
-                //val test = eventList[position].id
 
                 var intent = Intent(eventView.context, ViewEventActivity::class.java)
                 intent.putExtra("eid", eid)
 
                 eventView.context.startActivity(intent)
-
-                Toast.makeText(itemView.context, "You clicked on item #${eid}", Toast.LENGTH_SHORT).show()
             }
         }
     }

@@ -46,7 +46,6 @@ class ViewQueryActivity : AppCompatActivity() {
                     Log.d(LoginActivity.TAG, "DocumentSnapshot data: ${document.data}")
                     fullName = "${document.getString("firstname")} ${document.getString("lastname")}"
                     uid = currentUser.uid
-                    Toast.makeText(this, fullName, Toast.LENGTH_SHORT).show()
                 } else {
                     Log.d(LoginActivity.TAG, "No such document")
                 }
