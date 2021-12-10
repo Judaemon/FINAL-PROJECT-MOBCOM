@@ -29,13 +29,15 @@ class UpdateProfileActivity : AppCompatActivity() {
                 saveProfile()
                 Toast.makeText(baseContext, "Successfully Updated",
                     Toast.LENGTH_SHORT).show()
+                startActivity(Intent(this, StudentMainActivity::class.java))
+                finish()
             }
         }
 
-        val back = findViewById<TextView>(R.id.back)
-        back.setOnClickListener {
-            startActivity(Intent(this, StudentMainActivity::class.java))
-        }
+//        val back = findViewById<TextView>(R.id.back)
+//        back.setOnClickListener {
+//            startActivity(Intent(this, StudentMainActivity::class.java))
+//        }
     }
 
     public override fun onStart() {

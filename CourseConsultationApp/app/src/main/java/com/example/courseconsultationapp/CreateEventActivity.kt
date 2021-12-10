@@ -113,8 +113,11 @@ class CreateEventActivity : AppCompatActivity() {
             //onclick -> button
             val btnSaveNewEvent = findViewById<Button>(R.id.btnSaveNewEvent)
             btnSaveNewEvent.setOnClickListener {
+                Toast.makeText(baseContext, "Event Successfully Added",
+                    Toast.LENGTH_SHORT).show()
                 createEvent()
-
+                startActivity(Intent(this, StudentMainActivity::class.java))
+                finish()
             }
         }
 

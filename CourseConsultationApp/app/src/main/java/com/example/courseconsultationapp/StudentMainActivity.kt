@@ -77,6 +77,7 @@ class StudentMainActivity : AppCompatActivity() {
                     finish()
                 }
                 R.id.itm_ViewEvents-> {
+                    this.startActivity(Intent(this, EventListActivity::class.java))
 
                 // this.startActivity(Intent(this, ViewQueriesActivity::class.java))
                 }
@@ -87,6 +88,7 @@ class StudentMainActivity : AppCompatActivity() {
             }
             true
         }
+
     }
 
     private fun updateNavigationViewHeader() {

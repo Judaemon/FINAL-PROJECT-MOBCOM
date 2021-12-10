@@ -41,5 +41,4 @@
         android:text="isAnswered"
         android:textAppearance="?attr/textAppearanceBody2"
         android:textColor="@color/purple_500" />
-
 </RelativeLayout>

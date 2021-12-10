@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.Toast
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -31,13 +32,9 @@ class PostQueryActivity : AppCompatActivity() {
 
         val postQuery = findViewById<Button>(R.id.btn_postQuery)
         postQuery.setOnClickListener {
+            Toast.makeText(baseContext, "Query Successfully Sent",
+                Toast.LENGTH_SHORT).show()
             postQuery()
-            startActivity(Intent(this, StudentMainActivity::class.java))
-            finish()
-        }
-
-        val cancelQuery = findViewById<Button>(R.id.btn_cancelQuery)
-        cancelQuery.setOnClickListener {
             startActivity(Intent(this, StudentMainActivity::class.java))
             finish()
         }

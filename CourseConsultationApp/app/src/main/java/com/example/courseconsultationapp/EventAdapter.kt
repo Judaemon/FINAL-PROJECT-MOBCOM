@@ -18,8 +18,11 @@ class EventAdapter (private val eventList : ArrayList<Event>) : RecyclerView.Ada
 
     override fun onBindViewHolder(holder: EventAdapter.EventHolder, position: Int) {
         val event : Event = eventList[position]
-        holder.topic.text = event.eventTitle
-        holder.isAnswered.text = event.eventTitle.toString()
+        val startDate = event.eventDateStart.toString()
+        val endDate = event.eventDateEnd.toString()
+
+        holder.topic.text = event.eventTitle.toString()
+        holder.isAnswered.text = "Date: $startDate - $endDate"
     }
 
     override fun getItemCount(): Int {
@@ -33,14 +36,12 @@ class EventAdapter (private val eventList : ArrayList<Event>) : RecyclerView.Ada
         init {
             eventView.setOnClickListener{
                 val position: Int = adapterPosition
-                val test = eventList[position].id
+                val eid = eventList[position].id
 
-                val intent = Intent(eventView.context, EventListActivity::class.java)
-                intent.putExtra("position", position);
+                var intent = Intent(eventView.context, ViewEventActivity::class.java)
+                intent.putExtra("eid", eid)
 
                 eventView.context.startActivity(intent)
-
-                Toast.makeText(itemView.context, "You clicked on item #${test}", Toast.LENGTH_SHORT).show()
             }
         }
     }

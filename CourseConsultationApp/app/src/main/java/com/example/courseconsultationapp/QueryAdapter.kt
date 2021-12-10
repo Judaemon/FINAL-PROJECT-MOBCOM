@@ -37,7 +37,6 @@ class QueryAdapter(private val queryList : ArrayList<Queries>) : RecyclerView.Ad
                 var intent = Intent(queryView.context, ViewQueryActivity::class.java)
                 intent.putExtra("qid", qid)
 
-                Toast.makeText(itemView.context, "You clicked on item #${qid}", Toast.LENGTH_SHORT).show()
                 itemView.context.startActivity(intent)
             }
         }
