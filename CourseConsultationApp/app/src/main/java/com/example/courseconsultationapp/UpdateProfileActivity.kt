@@ -32,10 +32,10 @@ class UpdateProfileActivity : AppCompatActivity() {
             }
         }
 
-        val back = findViewById<TextView>(R.id.back)
-        back.setOnClickListener {
-            startActivity(Intent(this, StudentMainActivity::class.java))
-        }
+//        val back = findViewById<TextView>(R.id.back)
+//        back.setOnClickListener {
+//            startActivity(Intent(this, StudentMainActivity::class.java))
+//        }
     }
 
     public override fun onStart() {

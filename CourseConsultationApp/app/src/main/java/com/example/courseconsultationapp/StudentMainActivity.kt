@@ -79,7 +79,7 @@ class StudentMainActivity : AppCompatActivity() {
                 R.id.itm_ViewEvents-> {
 //                    this.startActivity(Intent(this, ViewQueriesActivity::class.java))
                 }
-                R.id.itm_ViewPosts-> {
+                R.id.itm_ViewQuery-> {
                     this.startActivity(Intent(this, ViewQueriesActivity::class.java))
                 }
                 else-> Toast.makeText(applicationContext, "Error can't find item", Toast.LENGTH_SHORT).show()

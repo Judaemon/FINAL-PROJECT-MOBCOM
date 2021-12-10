@@ -11,10 +11,6 @@
             android:icon="@drawable/ic_event"
             android:title="Create Event"/>
 
-        <item
-            android:id="@+id/itm_PostQuery"
-            android:icon="@drawable/ic_post_add"
-            android:title="Post Query"/>
 
         <item
             android:id="@+id/itm_SendEmail"
