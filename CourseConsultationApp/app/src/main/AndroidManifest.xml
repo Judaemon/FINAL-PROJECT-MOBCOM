@@ -34,6 +34,9 @@
             android:name=".ViewQueriesActivity"
             android:exported="true" />
         <activity
+            android:name=".ViewQueryActivity"
+            android:exported="true" />
+        <activity
             android:name=".PostQueryActivity"
             android:exported="true" />
         <activity

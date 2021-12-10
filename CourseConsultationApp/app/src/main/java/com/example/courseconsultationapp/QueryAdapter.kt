@@ -1,6 +1,5 @@
 package com.example.courseconsultationapp
 
-import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
@@ -35,12 +34,11 @@ class QueryAdapter(private val queryList : ArrayList<Queries>) : RecyclerView.Ad
                 val position: Int = adapterPosition
                 val qid = queryList[position].id
 
-                val intent = Intent(queryView.context, ViewQueryActivity::class.java)
-                intent.putExtra("qid", qid);
-
-                queryView.context.startActivity(intent)
+                var intent = Intent(queryView.context, ViewQueryActivity::class.java)
+                intent.putExtra("qid", qid)
 
                 Toast.makeText(itemView.context, "You clicked on item #${qid}", Toast.LENGTH_SHORT).show()
+                itemView.context.startActivity(intent)
             }
         }
     }

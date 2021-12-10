@@ -44,12 +44,6 @@ class ViewQueriesActivity : AppCompatActivity() {
                     query!!.id = it.id
                     queriesArrayList.add(query)
                 }
-//
-//                for (dc: DocumentChange in snapshot?.documentChanges!!) {
-//                    if (dc.type == DocumentChange.Type.ADDED) {
-//                        queriesArrayList.add(dc.document.toObject(Queries::class.java))
-//                    }
-//                }
 
                 queryAdapter.notifyDataSetChanged()
             }

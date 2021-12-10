@@ -108,7 +108,7 @@ class CreateEventActivity : AppCompatActivity() {
             endTime.setOnClickListener {
                 showTimePicker(endTime)
             }
-            val studSendEmail=findViewById<Button>(R.id.btn_studentSendEmail)
+//            val studSendEmail=findViewById<Button>(R.id.btn_studentSendEmail)
 
             //onclick -> button
             val btnSaveNewEvent = findViewById<Button>(R.id.btnSaveNewEvent)

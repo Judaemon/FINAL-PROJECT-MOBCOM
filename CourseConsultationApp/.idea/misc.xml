@@ -8,10 +8,14 @@
         <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_main.xml" value="0.1953125" />
         <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_post_query.xml" value="0.33" />
         <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_register.xml" value="0.33" />
+        <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_student_main.xml" value="0.25" />
         <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_update_profile.xml" value="0.209375" />
         <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_view_queries.xml" value="0.23880597014925373" />
         <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/activity_view_query.xml" value="0.33" />
         <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/item_query.xml" value="0.33" />
+        <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/layout/nav_header.xml" value="0.209375" />
+        <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/menu/StudentMenu.xml" value="0.209375" />
+        <entry key="..\:/Documents/GitHub/FINAL-PROJECT-MOBCOM/CourseConsultationApp/app/src/main/res/menu/student_menu.xml" value="0.25" />
       </map>
     </option>
   </component>

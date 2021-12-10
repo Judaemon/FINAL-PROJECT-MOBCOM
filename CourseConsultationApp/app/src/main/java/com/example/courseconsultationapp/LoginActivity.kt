@@ -1,6 +1,8 @@
 package com.example.courseconsultationapp
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -19,6 +21,9 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var email: TextInputLayout
     private lateinit var password: TextInputLayout
 
+    private lateinit var userPref: SharedPreferences
+    private lateinit var editor: SharedPreferences.Editor
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -28,6 +33,9 @@ class LoginActivity : AppCompatActivity() {
         // Getting the input field by ID
         email = findViewById(R.id.email)
         password = findViewById(R.id.password)
+
+        userPref = getPreferences(Context.MODE_PRIVATE) // Initialization of SharedPreference
+        editor = userPref.edit()
 
         var emailValue: String
         var passwordValue: String
@@ -99,6 +107,7 @@ class LoginActivity : AppCompatActivity() {
                 .addOnSuccessListener { document ->
                     if (document != null) {
                         Log.d(TAG, "DocumentSnapshot data: ${document.data}")
+                        saveProfile(currentUser.email.toString(), document.getString("firstname").toString(), document.getString("lastname").toString())
                         if (document.getBoolean("isInstructor") == true){
                             startActivity(Intent(this, InstructorMainActivity::class.java))
                             finish()
@@ -161,6 +170,15 @@ class LoginActivity : AppCompatActivity() {
                 true
             }
         }
+    }
+
+    private fun saveProfile(email: String, firstname:String, lastname: String){
+        editor.putString("email", email)
+        editor.putString("firstname", firstname)
+        editor.putString("lastname", lastname)
+
+        editor.apply()
+        editor.commit()
     }
 
     companion object {
