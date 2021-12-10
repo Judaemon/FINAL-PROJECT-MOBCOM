@@ -55,6 +55,16 @@ class ViewQueryActivity : AppCompatActivity() {
                 Log.d(LoginActivity.TAG, "get failed with ", exception)
             }
 
+        val viewAnswer = findViewById<Button>(R.id.btn_viewAnswer)
+        viewAnswer.setOnClickListener {
+
+            var intent = Intent(this, ViewAnswersActivity::class.java)
+            intent.putExtra("qid", qid)
+
+            startActivity(intent)
+            finish()
+        }
+
         val submitAnswer = findViewById<Button>(R.id.btn_submitAnswer)
         submitAnswer.setOnClickListener {
             submitAnswer()

@@ -30,10 +30,12 @@
     <group>
         <item
             android:id="@+id/itm_ViewEvents"
+            android:icon="@drawable/ic_event_view"
             android:title="View Events"/>
 
         <item
             android:id="@+id/itm_ViewPosts"
+            android:icon="@drawable/ic_question"
             android:title="View Posts"/>
     </group>
 
