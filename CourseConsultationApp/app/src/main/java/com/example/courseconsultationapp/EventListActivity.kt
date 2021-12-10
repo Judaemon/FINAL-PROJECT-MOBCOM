@@ -32,15 +32,16 @@ class EventListActivity : AppCompatActivity() {
     private fun eventChangeListener() {
         db = FirebaseFirestore.getInstance()
         db.collection("events")
-            .addSnapshotListener { value, error ->
+            .addSnapshotListener { snapshot, error ->
                 if (error != null) {
                     Log.e("Firestore Error", error.message.toString())
                 }
 
-                for (dc: DocumentChange in value?.documentChanges!!) {
-                    if (dc.type == DocumentChange.Type.ADDED) {
-                        eventArrayList.add(dc.document.toObject(Event::class.java))
-                    }
+                val test = snapshot!!.documents
+                test.forEach {
+                    val event  = it.toObject(Event::class.java)
+                    event!!.id = it.id
+                    eventArrayList.add(event)
                 }
 
                 eventAdapter.notifyDataSetChanged()
